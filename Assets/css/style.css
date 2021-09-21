@@ -1,0 +1,75 @@
+/* This section for vsariables  */
+:root {
+
+    --Textbox: gainsboro;
+    --FontSize: 24px;
+}
+
+/* This section for vsariables  */
+
+/* SECTION for all of the styles for header and nav links */
+header {
+background-color:rgb(179, 175, 166);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+display: flex;
+border: solid 3px;
+margin: 1% 0%;
+}
+
+header h1{
+    font-weight: 700;
+    padding: 1%;
+    margin: 1%;
+    text-decoration: underline;
+    background-color: var(--Textbox);
+    
+}
+
+ 
+ul {
+    
+    display: inline;
+    display: -webkit-box;
+    list-style-type:none;
+    float: right;
+
+}
+
+ul li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    padding: 5%;
+    text-decoration: underline;
+    
+   
+    
+}
+
+/* Thes Aside navigation box */
+
+
+main{
+    display: flex;
+    flex-direction: row:
+    
+}
+
+.about{
+    width=25%;
+    height: 25%;
+    
+}
+
+.about h1 {
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: var(--FontSize);
+    background-color: var(--Textbox);
+    border-right: solid 5px;
+
+}
+
+.about p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
