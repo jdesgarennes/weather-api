@@ -23,3 +23,15 @@ border: 2px solid black;
     align-items: center;
 
 }
+
+
+.fiveDay{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.card{
+    margin: 10px;
+}
