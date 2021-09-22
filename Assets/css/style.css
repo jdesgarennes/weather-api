@@ -10,3 +10,16 @@
     background-color: red;
     border-radius: 1em;
 }
+
+
+.weatherContainer{
+
+width: 50%;
+border: 2px solid black;
+}
+
+.searchBox{
+    display: flex;
+    align-items: center;
+
+}
