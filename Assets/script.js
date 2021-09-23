@@ -19,19 +19,23 @@ function getWeather(DATA) {
   cityTemp=data.main.temp;
   cityHumidity=data.main.humidity;
   cityWind=data.wind.speed;
-  console.log(cityWind);
+  cityIcon=data.weather[0].icon;
+  //console.log(cityWind);
   console.log(data);
-
+  console.log(cityIcon);
+   
 
   // Create html values in box
 var cName = document.querySelector('#cardbodyCity');
 var cTemp = document.querySelector('#cardbodyTemp');
 var cWind = document.querySelector('#cardbodywind');
 var cHumidity = document.querySelector('#cardbodyHumidity');
+var cIcon = document.querySelector('#cardbodyIcon');
 //cName.document.createElement('h1');
 // CITY NAME
 cName.innerText = "City: "+ cityName + " " +date.format("MM/DD/YYYY");
-
+// CITY ICON
+document.getElementById("cardbodyIcon").setAttribute('src', 'http://openweathermap.org/img/wn/'+ cityIcon +'@2x.png');
 // CITY TEMP
 cTemp.innerText = "Current Temp: "+ cityTemp + " Fahrenheit";
 // CITY WIND
