@@ -30,6 +30,18 @@ function getWeather(DATA) {
   console.log(cityIcon);
    
 
+// create local storage
+
+function history1() {
+  
+
+  localStorage.setItem(city, city);
+
+  }
+  history1();
+
+
+
   // Create html values in box
 var cName = document.querySelector('#cardbodyCity');
 var cTemp = document.querySelector('#cardbodyTemp');
@@ -90,6 +102,14 @@ function getWeatherFive(data5){
   cityWind3=data5.list[26].wind.speed;
   cityWind4=data5.list[34].wind.speed;
 
+  // HUM API data 
+  cityHum0=data5.list[2].main.humidity;
+  cityHum1=data5.list[10].main.humidity;
+  cityHum2=data5.list[18].main.humidity;
+  cityHum3=data5.list[26].main.humidity;
+  cityHum4=data5.list[34].main.humidity;
+
+
 // City Name
   var fiveName0 = document.querySelector('.fiveDayCity0');
   var fiveName1 = document.querySelector('.fiveDayCity1');
@@ -139,14 +159,32 @@ var fivewind1 = document.querySelector('.fiveDayWind1');
 var fivewind2 = document.querySelector('.fiveDayWind2');
 var fivewind3 = document.querySelector('.fiveDayWind3');
 var fivewind4 = document.querySelector('.fiveDayWind4');
-fivewind0.innerText='WIND '+cityWind0+' MPH';
-fivewind1.innerText='WIND '+cityWind1+' MPH';
-fivewind2.innerText='WIND '+cityWind2+' MPH';
-fivewind3.innerText='WIND '+cityWind3+' MPH';
-fivewind4.innerText='WIND '+cityWind4+' MPH';
+fivewind0.innerText='WIND: '+cityWind0+' MPH';
+fivewind1.innerText='WIND: '+cityWind1+' MPH';
+fivewind2.innerText='WIND: '+cityWind2+' MPH';
+fivewind3.innerText='WIND: '+cityWind3+' MPH';
+fivewind4.innerText='WIND: '+cityWind4+' MPH';
+
+// Humidity 5 day
+var fivehum0 = document.querySelector('.fiveDayHum0');
+var fivehum1 = document.querySelector('.fiveDayHum1');
+var fivehum2 = document.querySelector('.fiveDayHum2');
+var fivehum3 = document.querySelector('.fiveDayHum3');
+var fivehum4 = document.querySelector('.fiveDayHum4');
+
+
+fivehum0.innerText='Humidity: '+cityHum0;
+fivehum1.innerText='Humidity: '+cityHum1;
+fivehum2.innerText='Humidity: '+cityHum2;
+fivehum3.innerText='Humidity: '+cityHum3;
+fivehum4.innerText='Humidity: '+cityHum4;
+
+
+
 
 
 });
+
 
 }
 
