@@ -7,3 +7,4 @@ The following App is a simple weather dashboard that accepts a user input to sea
 
 
 
+![Weather AP](./Assets/sh.jpg)
