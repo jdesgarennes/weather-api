@@ -2,6 +2,8 @@ var searchCity = document.querySelector("#sButton");
 var cityInput = document.querySelector("#textBox");
 var apiKey = '1324b076d7d8ed0b45bf5b20fdc67fb8';
 var city='Murrieta';
+
+// momnet Time current and days for five day
 const date = moment();
 const day1 = moment().add(1,'days');
 const day2 = moment().add(2,'days');
@@ -13,7 +15,6 @@ const day5 = moment().add(5,'days');
 function getWeather(DATA) {
   var city = cityInput.value;
   var requestUrl ='https://api.openweathermap.org/data/2.5/weather?q=';
-  //var cityHumidity =[];
   fetch(requestUrl + city +"&appid="+ apiKey+"&units=imperial", {
 })  
 .then(response => {
@@ -25,7 +26,6 @@ function getWeather(DATA) {
   cityHumidity=data.main.humidity;
   cityWind=data.wind.speed;
   cityIcon=data.weather[0].icon;
-  //console.log(cityWind);
   console.log(data);
   console.log(cityIcon);
    
@@ -36,7 +36,7 @@ var cTemp = document.querySelector('#cardbodyTemp');
 var cWind = document.querySelector('#cardbodywind');
 var cHumidity = document.querySelector('#cardbodyHumidity');
 var cIcon = document.querySelector('#cardbodyIcon');
-//cName.document.createElement('h1');
+
 // CITY NAME
 cName.innerText = "City: "+ cityName + " " +date.format("MM/DD/YYYY");
 // CITY ICON
@@ -48,8 +48,6 @@ cWind.innerText = "Wind: " + cityWind + " MPH";
 // CITY Humidity
 cHumidity.innerText = "Humidity: " + cityHumidity;
 
-
-
   });
 
 }
@@ -57,7 +55,6 @@ cHumidity.innerText = "Humidity: " + cityHumidity;
 function getWeatherFive(data5){
   city = cityInput.value;
 
-    var requestUrl5 ='https://api.openweathermap.org/data/2.5/forecast?q=';
     fetch('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=1324b076d7d8ed0b45bf5b20fdc67fb8&units=imperial', { 
     }) 
   .then(response => {
@@ -72,28 +69,26 @@ function getWeatherFive(data5){
   cityTemp3=data5.list[26].main.temp;
   cityTemp4=data5.list[34].main.temp;
 
-  //cityTemp=data5.main.temp;
-  //cityHumidity=data5.main.humidity;
-  //cityWind=data5.wind.speed;
+  // Weather ICON API data
   cityIcon0=data5.list[2].weather[0].icon;
   cityIcon1=data5.list[10].weather[0].icon;
   cityIcon2=data5.list[18].weather[0].icon;
   cityIcon3=data5.list[26].weather[0].icon;
   cityIcon4=data5.list[34].weather[0].icon;
 
+  // Weather Description API data
   cityDesc0=data5.list[2].weather[0].description;
   cityDesc1=data5.list[10].weather[0].description;
   cityDesc2=data5.list[18].weather[0].description;
   cityDesc3=data5.list[26].weather[0].description;
   cityDesc4=data5.list[34].weather[0].description;
 
+  // Wind API data
   cityWind0=data5.list[2].wind.speed;
   cityWind1=data5.list[10].wind.speed;
   cityWind2=data5.list[18].wind.speed;
   cityWind3=data5.list[26].wind.speed;
   cityWind4=data5.list[34].wind.speed;
-
-
 
 // City Name
   var fiveName0 = document.querySelector('.fiveDayCity0');
@@ -132,7 +127,6 @@ var fivedesc1 = document.querySelector('.descity1');
 var fivedesc2 = document.querySelector('.descity2');
 var fivedesc3 = document.querySelector('.descity3');
 var fivedesc4 = document.querySelector('.descity4');
-
 fivedesc0.innerText=cityDesc0;
 fivedesc1.innerText=cityDesc1;
 fivedesc2.innerText=cityDesc2;
@@ -140,13 +134,11 @@ fivedesc3.innerText=cityDesc3;
 fivedesc4.innerText=cityDesc4;
 
 // Wind 5 day
-
 var fivewind0 = document.querySelector('.fiveDayWind0');
 var fivewind1 = document.querySelector('.fiveDayWind1');
 var fivewind2 = document.querySelector('.fiveDayWind2');
 var fivewind3 = document.querySelector('.fiveDayWind3');
 var fivewind4 = document.querySelector('.fiveDayWind4');
-
 fivewind0.innerText='WIND '+cityWind0+' MPH';
 fivewind1.innerText='WIND '+cityWind1+' MPH';
 fivewind2.innerText='WIND '+cityWind2+' MPH';
@@ -156,12 +148,7 @@ fivewind4.innerText='WIND '+cityWind4+' MPH';
 
 });
 
-
 }
-
-
-
-//getWeather();
 
 
 
